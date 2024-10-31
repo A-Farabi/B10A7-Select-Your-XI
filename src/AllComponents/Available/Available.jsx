@@ -7,7 +7,7 @@ const Available = ({handleSelectedPlayer}) => {
     const [players, setPlayers] = useState([])
 
     useEffect(()=>{
-        fetch('/public/fakedata.json')
+        fetch('/fakedata.json')
         .then(res => res.json())
         .then(data => setPlayers(data.players))
     }, [])
